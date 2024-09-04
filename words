@@ -1,0 +1,21 @@
+word_meanings = {
+    "lol": ": very funny",
+    "kringe": ": something strange, shameful",
+    "rofl": ": joke",
+    "shield": ": approval or delight",
+    "creep": ": scary, frightening",
+    "aggrandize": ": get angry"
+}
+
+# Define a function to find the meaning of a word
+def find_meaning(word):
+    word = word.lower()  # Convert the input to lowercase
+    if word in word_meanings:
+        return word.upper() + word_meanings[word]
+    else:
+        return "Word not found!"
+
+# Test the function
+while True:
+    user_input = input("Enter a word: ")
+    print(find_meaning(user_input))
